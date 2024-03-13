@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập</title>
+    <style>
+        body {
+            background-color: #333;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .login-container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+        }
+        .login-header {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="password"] {
+            width: calc(100% - 50px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            background-color: #555;
+            color: white;
+        }
+        .login-button {
+            width: 50px;
+            height: 40px; 
+            background-color: red; 
+            color: white; 
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <div class="login-header">Đăng Nhập</div>
+    <form action="/action_page.php" method="post">
+        <input type="text" id="username" name="username" placeholder="Tên đăng nhập" value="saigon"><br>
+        <input type="password" id="pwd" name="pwd" placeholder="Mật khẩu"><br>
+        
+        <input type="submit" class="login-button" value="🔒">
+    </form> 
+    
+</div>
+
+</body>
+</html>

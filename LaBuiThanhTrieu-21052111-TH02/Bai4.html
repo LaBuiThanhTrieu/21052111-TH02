@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Tính chỉ số BMI</title>
+<script>
+function tinhBMI() {
+    var canNang = document.getElementById('canNang').value;
+    var chieuCao = document.getElementById('chieuCao').value / 100; // chuyển cm sang m
+    var bmi = canNang / (chieuCao * chieuCao);
+    document.getElementById('bmi').value = bmi.toFixed(2);
+}
+</script>
+</head>
+<body>
+<h1>Tính chỉ số BMI</h1>
+<form>
+    <label for="canNang">Cân nặng (kg):</label>
+    <input type="number" id="canNang" name="canNang" required><br><br>
+    
+    <label for="chieuCao">Chiều cao (cm):</label>
+    <input type="number" id="chieuCao" name="chieuCao" required><br><br>
+    
+    <label for="tuoi">Chọn loại tuổi:</label>
+    <select id="tuoi" name="tuoi">
+        <option value="treEm">Trẻ em</option>
+        <option value="nguoiLon">Người lớn</option>
+        <option value="nguoiGia">Người già</option>
+    </select><br><br>
+    
+    <input type="button" value="Tính BMI" onclick="tinhBMI()">
+    <input type="text" id="bmi" name="bmi" disabled><br><br>
+</form>
+</body>
+</html>
